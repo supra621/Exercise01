@@ -68,7 +68,7 @@ class StringRotation:
         """Given a string and a positive integer, return a new string that's been wrapped around the given index.
         If the rotation amount is greater than the string length, I think it should still wrap around by the remainder.
         """
-        if rotation_amount < 0 or not isinstance(rotation_amount, int):
+        if not isinstance(rotation_amount, int) or rotation_amount < 0:
             raise ValueError("rotation_amount must be a positive integer")
         string_length = len(string)
         index = rotation_amount % string_length  # handles rotation amounts greater than string length
